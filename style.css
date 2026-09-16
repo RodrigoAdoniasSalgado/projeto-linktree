@@ -1,0 +1,87 @@
+/* =========================================
+   BODY (CORPO DA PÁGINA / PAGE BODY)
+========================================= */
+body {
+  /* Substitua o background-color pela imagem / Replace background-color with image */
+  background-image: url('backgroundImage.jpg'); 
+  
+  /* Faz a imagem cobrir a tela toda sem esticar / Makes image cover full screen without stretching */
+  background-size: cover; 
+  
+  /* Mantém a imagem sempre centralizada / Keeps the image centered */
+  background-position: center; 
+  
+  /* Impede que a imagem fique se repetindo / Prevents the image from repeating */
+  background-repeat: no-repeat; 
+
+  font-family: Arial, sans-serif; /* Fonte sem serifa / Sans-serif font */
+  
+  /* Flexbox: Centralização total / Full centering */
+  display: flex; /* Ativa o Flexbox / Enables Flexbox */
+  flex-direction: column; /* Empilha os elementos / Stacks elements vertically */
+  align-items: center; /* Centraliza no eixo X (horizontal) / Centers on X axis */
+  justify-content: center; /* Centraliza no eixo Y (vertical) / Centers on Y axis */
+  min-height: 100vh; /* Ocupa 100% da altura da tela / Takes 100% of screen height */
+}
+
+/* =========================================
+   IMG (IMAGEM / IMAGE)
+========================================= */
+img {
+  width: 300px; /* Largura fixa / Fixed width */
+  height: 300px; /* Altura fixa igual à largura / Fixed height equal to width */
+  border-radius: 50%; /* Transforma o quadrado em círculo / Turns square into circle */
+  object-fit: cover; /* Preenche a caixa sem distorcer a foto / Fills box without distorting */
+  border: 4px solid #ffffff; /* Adiciona uma borda sólida branca de 4px / Adds a 4px solid white border */
+}
+
+/* =========================================
+   A (LINKS / ANCHORS)
+========================================= */
+a {
+  display: block; /* Ocupa a linha inteira disponível / Takes up full available line width */
+  text-align: center; /* Centraliza o texto dentro da caixa / Centers text inside the box */
+  text-decoration: none; /* Remove a linha de baixo do link / Removes underline */
+  color: rgba(0, 103, 132); /* Cor usando RGBA (Red, Green, Blue, Alpha) / Color using RGBA */
+  background-color: rgb(255, 255, 255); /* Cor de fundo / Background color */
+  padding: 15px; /* Espaço interno (enchimento) / Inner spacing */
+  margin: 10px; /* Espaço externo (separação) / Outer spacing */
+  border-radius: 8px; /* Cantos levemente arredondados / Slightly rounded corners */
+  transition: 0.3s; /* Animação suave de 0.3 segundos / Smooth 0.3s animation */
+  font-size: 20px; /* Define o tamanho da fonte / Sets font size */
+}
+
+/* =========================================
+   H1 (TÍTULO PRINCIPAL / MAIN HEADING)
+========================================= */
+h1 {
+    color: white; /* Muda a cor do texto para branco / Changes text color to white */
+}
+
+/* =========================================
+   P (PARÁGRAFO / PARAGRAPH)
+========================================= */
+p {
+    color: white; /* Muda a cor do texto para branco / Changes text color to white */
+    font-size: 20px; /* Define o tamanho da fonte / Sets font size */
+}
+
+/* =========================================
+   A:HOVER (EFEITO DO MOUSE / MOUSE HOVER)
+========================================= */
+a:hover {
+  background-color: rgba(0, 103, 132); /* Nova cor de fundo ao passar o mouse / New bg color on hover */
+  color: rgb(253, 253, 253); /* Nova cor do texto ao passar o mouse / New text color on hover */
+}
+
+/* =========================================
+   MAIN (CONTEÚDO PRINCIPAL / MAIN CONTENT)
+========================================= */
+main {
+  width: 100%; /* Ocupa tudo o que puder... / Takes all it can... */
+  max-width: 300px; /* ...mas trava no máximo de 300px / ...but stops at 300px max */
+}
+
+header { 
+    text-align: center; /* Centraliza o texto (nome e subtítulo) / Centers text (name and subtitle) */
+}
