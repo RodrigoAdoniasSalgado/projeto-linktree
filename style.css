@@ -2,90 +2,170 @@
    BODY (CORPO DA PÁGINA / PAGE BODY)
 ========================================= */
 body {
-  /* Substitua o background-color pela imagem / Replace background-color with image */
-  background-image: url('backgroundImage.jpg'); 
+  font-family: Arial, sans-serif;
   
-  /* Faz a imagem cobrir a tela toda sem esticar / Makes image cover full screen without stretching */
-  background-size: cover; 
-  
-  /* Mantém a imagem sempre centralizada / Keeps the image centered */
-  background-position: center; 
-  
-  /* Impede que a imagem fique se repetindo / Prevents the image from repeating */
-  background-repeat: no-repeat; 
-
-  font-family: Arial, sans-serif; /* Fonte sem serifa / Sans-serif font */
+  /* Configurações de Fundo (Modo Claro) / Background Settings (Light Mode) */
+  background-image: url('backgroundImageLight.jpg'); 
+  background-size: cover; /* Cobre a tela toda / Covers full screen */
+  background-position: center; /* Centraliza a imagem / Centers the image */
+  background-repeat: no-repeat; /* Não repete a imagem / No repeat */
+  background-color: #f0f2f5; /* Cor de fallback caso a imagem falhe / Fallback color */
   
   /* Flexbox: Centralização total / Full centering */
-  display: flex; /* Ativa o Flexbox / Enables Flexbox */
-  flex-direction: column; /* Empilha os elementos / Stacks elements vertically */
-  align-items: center; /* Centraliza no eixo X (horizontal) / Centers on X axis */
-  justify-content: center; /* Centraliza no eixo Y (vertical) / Centers on Y axis */
-  min-height: 100vh; /* Ocupa 100% da altura da tela / Takes 100% of screen height */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  min-height: 100vh; 
+  
+  /* A transição aqui já serve para quando o body mudar de classe! */
+  transition: background-color 0.4s, color 0.4s; 
 }
 
 /* =========================================
-   IMG (IMAGEM / IMAGE)
+   HEADER & TEXTOS (CABEÇALHO / HEADER & TEXT)
+========================================= */
+header { 
+  text-align: center; 
+}
+
+h1 {
+  color: black;
+  transition: color 0.4s; /* Suaviza a troca de cor para o dark mode */
+}
+
+p {
+  color: black; 
+  font-size: 20px;
+  transition: color 0.4s; /* Suaviza a troca de cor para o dark mode */
+}
+
+/* =========================================
+   IMG (IMAGEM DE PERFIL / PROFILE IMAGE)
 ========================================= */
 img {
-  width: 300px; /* Largura fixa / Fixed width */
-  height: 300px; /* Altura fixa igual à largura / Fixed height equal to width */
-  border-radius: 50%; /* Transforma o quadrado em círculo / Turns square into circle */
-  object-fit: cover; /* Preenche a caixa sem distorcer a foto / Fills box without distorting */
-  border: 4px solid #ffffff; /* Adiciona uma borda sólida branca de 4px / Adds a 4px solid white border */
+  width: 300px; 
+  height: 300px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 4px solid #ffffff; /* Borda branca / White border */
 }
 
 /* =========================================
    A (LINKS / ANCHORS)
 ========================================= */
-a {
-   /* Flexbox: Organiza o ícone e o texto / Organizes icon and text */
-   display: flex; /* Ativa o modo flexível / Enables flexible mode */
-   align-items: center; /* Centraliza no eixo vertical / Centers on vertical axis */
-   justify-content: center; /* Centraliza no eixo horizontal / Centers on horizontal axis */
-   gap: 12px; /* Cria um espaço entre o ícone e o texto / Adds space between icon and text */
-   text-align: center; /* Centraliza o texto dentro da caixa / Centers text inside the box */
-   text-decoration: none; /* Remove a linha de baixo do link / Removes underline */
-   color: rgba(0, 103, 132); /* Cor usando RGBA (Red, Green, Blue, Alpha) / Color using RGBA */
-   background-color: rgb(255, 255, 255); /* Cor de fundo / Background color */
-   padding: 15px; /* Espaço interno (enchimento) / Inner spacing */
-   margin: 10px; /* Espaço externo (separação) / Outer spacing */
-   border-radius: 8px; /* Cantos levemente arredondados / Slightly rounded corners */
-   transition: 0.4s; /* Animação suave de 0.3 segundos / Smooth 0.3s animation */
-   font-size: 22px; /* Define o tamanho da fonte / Sets font size */
-}
-
-/* =========================================
-   H1 (TÍTULO PRINCIPAL / MAIN HEADING)
-========================================= */
-h1 {
-    color: white; /* Muda a cor do texto para branco / Changes text color to white */
-}
-
-/* =========================================
-   P (PARÁGRAFO / PARAGRAPH)
-========================================= */
-p {
-    color: white; /* Muda a cor do texto para branco / Changes text color to white */
-    font-size: 20px; /* Define o tamanho da fonte / Sets font size */
-}
-
-/* =========================================
-   A:HOVER (EFEITO DO MOUSE / MOUSE HOVER)
-========================================= */
-a:hover {
-  background-color: rgba(0, 103, 132); /* Nova cor de fundo ao passar o mouse / New bg color on hover */
-  color: rgb(253, 253, 253); /* Nova cor do texto ao passar o mouse / New text color on hover */
-}
-
-/* =========================================
-   MAIN (CONTEÚDO PRINCIPAL / MAIN CONTENT)
-========================================= */
 main {
-  width: 100%; /* Ocupa tudo o que puder... / Takes all it can... */
-  max-width: 300px; /* ...mas trava no máximo de 300px / ...but stops at 300px max */
+  width: 100%; 
+  max-width: 300px; 
 }
 
-header { 
-    text-align: center; /* Centraliza o texto (nome e subtítulo) / Centers text (name and subtitle) */
+a {
+  /* Layout Interno do Botão (Flexbox) */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 12px; /* Espaço entre ícone e texto / Space between icon and text */
+  
+  /* Estilos Visuais */
+  text-align: center; 
+  text-decoration: none; 
+  color: rgba(0, 103, 132, 1); 
+  background-color: rgb(255, 255, 255); 
+  padding: 15px; 
+  margin: 10px; 
+  border-radius: 8px; 
+  font-size: 22px; 
+  
+  /* A transição na base serve para o hover E para o dark mode */
+  transition: 0.4s; 
+}
+
+a:hover {
+  background-color: rgba(0, 103, 132, 1); 
+  color: rgb(253, 253, 253); 
+}
+
+/* =========================================
+   BOTÃO DE TEMA (DARK/LIGHT MODE BUTTON)
+========================================= */
+#botao-tema {
+  position: fixed; /* Tira o botão do fluxo e o fixa na tela / Fixes on screen */
+  bottom: 20px; /* Distância de 20px do fundo / 20px from bottom */
+  left: 20px; /* Distância de 20px da esquerda / 20px from left */
+  z-index: 1000; /* Garante que fique por cima de tudo / Keeps it on top */
+  
+  background: transparent; 
+  border: none; 
+  font-size: 30px; 
+  color: black; 
+  cursor: pointer; 
+  transition: color 0.4s; /* Anima a troca de cor */
+}
+
+#botao-tema:hover {
+  color: rgba(0, 103, 132, 1); 
+}
+
+/* =========================================
+   TEMA ESCURO (DARK MODE OVERRIDES)
+========================================= */
+/* Regras aplicadas APENAS quando a classe "dark-mode" estiver ativa */
+
+/* Corpo e Fundo */
+body.dark-mode {
+  background-color: #121214; 
+}
+
+/* Textos no Dark Mode */
+body.dark-mode h1,
+body.dark-mode p {
+  color: rgb(253, 253, 253); /* Letras brancas / White font */
+}
+
+/* Botão Lua no Dark Mode */
+body.dark-mode #botao-tema {
+  color: #e1e1e6;
+}
+
+body.dark-mode #botao-tema:hover {
+  color: rgba(0, 103, 132, 1);
+}
+
+/* Links no Dark Mode */
+body.dark-mode a {
+  background-color: #202024;
+  color: #e1e1e6;
+}
+
+body.dark-mode a:hover {
+  background-color: rgba(0, 103, 132, 1); 
+  color: rgb(253, 253, 253); 
+}
+
+/* =========================================
+   CAMADA FANTASMA (TRANSIÇÃO DE BACKGROUND)
+========================================= */
+/* Cria uma camada invisível antes de qualquer conteúdo do body */
+body::before {
+  content: ""; /* Obrigatório para o ::before funcionar */
+  position: fixed; /* Fixa na tela toda */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Joga a camada para trás de tudo */
+  
+  /* Configura a imagem escura aqui */
+  background-image: url('backgroundImageDark.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  opacity: 0; /* Começa totalmente transparente (invisível) */
+  transition: opacity 0.6s ease-in-out; /* A mágica da transição acontece aqui! */
+}
+
+/* Quando o body ganha a classe dark-mode, a camada fantasma aparece suavemente */
+body.dark-mode::before {
+  opacity: 1; /* Fica 100% visível */
 }
