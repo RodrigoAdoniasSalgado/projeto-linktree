@@ -39,16 +39,20 @@ img {
    A (LINKS / ANCHORS)
 ========================================= */
 a {
-  display: block; /* Ocupa a linha inteira disponível / Takes up full available line width */
-  text-align: center; /* Centraliza o texto dentro da caixa / Centers text inside the box */
-  text-decoration: none; /* Remove a linha de baixo do link / Removes underline */
-  color: rgba(0, 103, 132); /* Cor usando RGBA (Red, Green, Blue, Alpha) / Color using RGBA */
-  background-color: rgb(255, 255, 255); /* Cor de fundo / Background color */
-  padding: 15px; /* Espaço interno (enchimento) / Inner spacing */
-  margin: 10px; /* Espaço externo (separação) / Outer spacing */
-  border-radius: 8px; /* Cantos levemente arredondados / Slightly rounded corners */
-  transition: 0.3s; /* Animação suave de 0.3 segundos / Smooth 0.3s animation */
-  font-size: 20px; /* Define o tamanho da fonte / Sets font size */
+   /* Flexbox: Organiza o ícone e o texto / Organizes icon and text */
+   display: flex; /* Ativa o modo flexível / Enables flexible mode */
+   align-items: center; /* Centraliza no eixo vertical / Centers on vertical axis */
+   justify-content: center; /* Centraliza no eixo horizontal / Centers on horizontal axis */
+   gap: 12px; /* Cria um espaço entre o ícone e o texto / Adds space between icon and text */
+   text-align: center; /* Centraliza o texto dentro da caixa / Centers text inside the box */
+   text-decoration: none; /* Remove a linha de baixo do link / Removes underline */
+   color: rgba(0, 103, 132); /* Cor usando RGBA (Red, Green, Blue, Alpha) / Color using RGBA */
+   background-color: rgb(255, 255, 255); /* Cor de fundo / Background color */
+   padding: 15px; /* Espaço interno (enchimento) / Inner spacing */
+   margin: 10px; /* Espaço externo (separação) / Outer spacing */
+   border-radius: 8px; /* Cantos levemente arredondados / Slightly rounded corners */
+   transition: 0.4s; /* Animação suave de 0.3 segundos / Smooth 0.3s animation */
+   font-size: 22px; /* Define o tamanho da fonte / Sets font size */
 }
 
 /* =========================================
